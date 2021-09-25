@@ -1,0 +1,4 @@
+42 Docs:
+https://harm-smits.github.io/42docs/
+Zooming on the mouse position:
+https://www.youtube.com/watch?v=ZQ8qtAizis4
