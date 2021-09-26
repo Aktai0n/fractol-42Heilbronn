@@ -6,7 +6,7 @@
 /*   By: skienzle <skienzle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/18 11:49:31 by skienzle          #+#    #+#             */
-/*   Updated: 2021/09/25 11:14:31 by skienzle         ###   ########.fr       */
+/*   Updated: 2021/09/26 12:07:51 by skienzle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,14 @@ typedef struct s_colour
 {
 	int		max_i;
 	int		offset;
+	int		mode;
 }	t_colour;
+
+typedef struct s_fractol
+{
+	double	c_Re;
+	double	c_Im;
+} t_fractol;
 
 typedef struct s_data
 {
@@ -60,6 +67,7 @@ typedef struct s_data
 
 	t_complex	coords;
 	t_colour	colour;
+	t_fractol	fract;
 }	t_data;
 
 
@@ -86,6 +94,14 @@ typedef struct s_data
 # define DOWN_KEYCODE 125
 # define LEFT_KEYCODE 123
 # define RIGHT_KEYCODE 124
+# define NUM_1_KEYCODE 83
+# define NUM_2_KEYCODE 84
+# define NUM_3_KEYCODE 85
+# define NUM_4_KEYCODE 86
+# define NUM_PLUS_KEYCODE 69
+# define NUM_MINUS_KEYCODE 78
+# define PAGE_UP_KEYCODE 116
+# define PAGE_DOWN_KEYCODE 121
 
 # define MOUSE_LEFT_KEYCODE 1
 # define MOUSE_RIGHT_KEYCODE 2
