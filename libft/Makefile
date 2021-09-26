@@ -6,7 +6,7 @@
 #    By: skienzle <skienzle@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/15 16:50:07 by skienzle          #+#    #+#              #
-#    Updated: 2021/09/15 16:50:10 by skienzle         ###   ########.fr        #
+#    Updated: 2021/09/26 20:52:52 by skienzle         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,6 +25,7 @@ SRCS = ft_isdigit.c ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c \
 	ft_strchr.c ft_strdup.c ft_striteri.c ft_strjoin.c ft_strlcat.c \
 	ft_strlcpy.c ft_strlen.c ft_strmapi.c ft_strncmp.c ft_strnstr.c \
 	ft_strrchr.c ft_strtrim.c ft_substr.c ft_tolower.c ft_toupper.c \
+	ft_atof.c \
 	get_next_line_bonus.c get_next_line_utils_bonus.c \
 	ft_printers.c ft_printf.c
 

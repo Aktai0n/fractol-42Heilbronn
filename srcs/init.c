@@ -6,7 +6,7 @@
 /*   By: skienzle <skienzle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/26 19:22:56 by skienzle          #+#    #+#             */
-/*   Updated: 2021/09/26 19:24:13 by skienzle         ###   ########.fr       */
+/*   Updated: 2021/09/26 20:33:35 by skienzle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,26 @@
 
 void	handle_c_julia(char **argv, t_data *data)
 {
-	int	indexes;
-	int	dots;
+	int	errors[2];
 	int	i;
 	int	j;
 
 	j = 2;
 	while (j < 4)
 	{
-		indexes = 0;
-		dots = 0;
+		ft_bzero(errors, sizeof(errors));
 		i = 0;
 		while (argv[j][i] != '\0')
 		{
 			if (ft_strchr("+-.0123456789", argv[j][i]) == NULL)
 				print_incorrect_useage();
 			if (argv[j][i] == '+' || argv[j][i] == '-')
-				indexes++;
+				errors[0]++;
 			if (argv[j][i] == '.')
-				dots++;
+				errors[1]++;
 			i++;
 		}
-		if (indexes > 1 || dots > 1)
+		if (errors[0] > 1 || errors[1] > 1)
 			print_incorrect_useage();
 		j++;
 	}

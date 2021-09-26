@@ -6,7 +6,7 @@
 /*   By: skienzle <skienzle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/26 19:25:52 by skienzle          #+#    #+#             */
-/*   Updated: 2021/09/26 20:18:07 by skienzle         ###   ########.fr       */
+/*   Updated: 2021/09/26 20:30:53 by skienzle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int	create_image(t_data *data)
 {
 	data->img = mlx_new_image(data->mlx, WINDOW_WIDTH, WINDOW_HEIGHT);
 	data->addr = mlx_get_data_addr(data->img, &data->bits_per_pixel,
-	&data->line_length, &data->endian);
+			&data->line_length, &data->endian);
 	pixel_loop(data);
 	mlx_put_image_to_window(data->mlx, data->mlx_window, data->img, 0, 0);
 	return (0);
