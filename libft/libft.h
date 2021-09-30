@@ -6,7 +6,7 @@
 /*   By: skienzle <skienzle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 16:49:32 by skienzle          #+#    #+#             */
-/*   Updated: 2021/09/26 20:52:03 by skienzle         ###   ########.fr       */
+/*   Updated: 2021/09/30 15:13:05 by skienzle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,5 +89,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 */
 
 double	ft_atof(const char *str);
+void	ft_free_1d(void *to_free);
+void	free_2d(void **to_free);
 
 #endif

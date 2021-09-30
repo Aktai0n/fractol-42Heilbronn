@@ -6,7 +6,7 @@
 /*   By: skienzle <skienzle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/26 19:29:53 by skienzle          #+#    #+#             */
-/*   Updated: 2021/09/26 20:38:03 by skienzle         ###   ########.fr       */
+/*   Updated: 2021/09/30 14:43:51 by skienzle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,6 @@ int	mouse_pos(int x, int y, t_data *data)
 	{
 		data->fract.c_Re = x_to_Re((double)x, data);
 		data->fract.c_Im = y_to_Im((double)y, data);
-		data->fract.fract_type = julia;
 		create_image(data);
 	}
 	return (0);

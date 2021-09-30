@@ -6,24 +6,26 @@
 #    By: skienzle <skienzle@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/18 11:59:49 by skienzle          #+#    #+#              #
-#    Updated: 2021/09/26 20:48:43 by skienzle         ###   ########.fr        #
+#    Updated: 2021/09/30 14:49:50 by skienzle         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = fractol
 CC = gcc
-CFLAGS = -O3 -Wall -Werror -Wextra
+CFLAGS = -Wall -Werror -Wextra -O3
 MLX_FLAGS = -Lmlx -lmlx -framework OpenGL -framework AppKit
 RM = rm -rf
 
 ODIR = ./objs
 LIBFT = ./libft/libft.a
 
+INC = includes/fractol.h includes/keycodes.h includes/structures.h \
+	includes/prototypes.h
 SRC = srcs/init.c srcs/conversion.c srcs/colour.c srcs/fractols.c \
 	srcs/window.c srcs/mouse.c srcs/keys.c srcs/useage.c srcs/main.c
 OBJ = $(ODIR)/*.o
 
-$(NAME): $(SRC) ./includes/fractol.h
+$(NAME): $(SRC) $(INC)
 	make -C ./mlx
 	make -C ./libft
 	$(CC) $(CFLAGS) -c $(SRC)

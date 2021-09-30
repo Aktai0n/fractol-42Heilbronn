@@ -6,7 +6,7 @@
 /*   By: skienzle <skienzle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/26 20:44:23 by skienzle          #+#    #+#             */
-/*   Updated: 2021/09/26 20:45:21 by skienzle         ###   ########.fr       */
+/*   Updated: 2021/09/30 13:35:30 by skienzle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@
 # define NUM_2_KEYCODE 84
 # define NUM_3_KEYCODE 85
 # define NUM_4_KEYCODE 86
+# define NUM_5_KEYCODE 87
 # define NUM_PLUS_KEYCODE 69
 # define NUM_MINUS_KEYCODE 78
 # define PAGE_UP_KEYCODE 116
