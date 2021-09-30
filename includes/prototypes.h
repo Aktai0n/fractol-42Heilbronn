@@ -6,7 +6,7 @@
 /*   By: skienzle <skienzle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/30 13:00:55 by skienzle          #+#    #+#             */
-/*   Updated: 2021/09/30 14:48:52 by skienzle         ###   ########.fr       */
+/*   Updated: 2021/09/30 16:05:57 by skienzle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,10 +88,10 @@ int		mouse_pos(int x, int y, t_data *data);
 
 /* Prints instructions on how to get the parameters should be specified
 ** if incorrect parameters are given */
-void	print_incorrect_useage(void);
+void	print_incorrect_usage(void);
 
 /* Prints instructions on how to use fract-ol when it's opened */
-void	print_useage(void);
+void	print_usage(void);
 
 /* The formula of the mandelbrot set */
 int		mandelbrot(t_data *data);
