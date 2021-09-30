@@ -6,7 +6,7 @@
 /*   By: skienzle <skienzle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/26 19:22:56 by skienzle          #+#    #+#             */
-/*   Updated: 2021/09/30 13:41:33 by skienzle         ###   ########.fr       */
+/*   Updated: 2021/09/30 16:06:32 by skienzle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	handle_c_julia(char **argv, t_data *data)
 		while (argv[j][i] != '\0')
 		{
 			if (ft_strchr("+-.0123456789", argv[j][i]) == NULL)
-				print_incorrect_useage();
+				print_incorrect_usage();
 			if (argv[j][i] == '+' || argv[j][i] == '-')
 				errors[0]++;
 			if (argv[j][i] == '.')
@@ -34,7 +34,7 @@ void	handle_c_julia(char **argv, t_data *data)
 			i++;
 		}
 		if (errors[0] > 1 || errors[1] > 1)
-			print_incorrect_useage();
+			print_incorrect_usage();
 		j++;
 	}
 	data->fract.c_Re = ft_atof(argv[2]);
@@ -51,7 +51,7 @@ void	choose_fractal(int argc, char **argv, t_data *data)
 		|| (fract_type == 2 && argc != 4)
 		|| (fract_type == 3 && argc != 2)
 		|| (fract_type == 4 && argc != 2))
-		print_incorrect_useage();
+		print_incorrect_usage();
 	if (fract_type == 1)
 		data->fract.fract_type = mandelbrot;
 	else if (fract_type == 2)

@@ -6,7 +6,7 @@
 /*   By: skienzle <skienzle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/26 19:29:53 by skienzle          #+#    #+#             */
-/*   Updated: 2021/09/30 14:43:51 by skienzle         ###   ########.fr       */
+/*   Updated: 2021/09/30 16:17:21 by skienzle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ int	mouse_press(int keycode, int x, int y, t_data *data)
 	}
 	else if (keycode == MOUSE_RIGHT_KEYCODE && data->fract.get_mouse_pos == ON)
 		data->fract.get_mouse_pos = OFF;
-	if (keycode == MOUSE_LEFT_KEYCODE)
+	if (keycode == MOUSE_LEFT_KEYCODE && data->fract.get_mouse_pos == OFF)
 	{
 		data->mouse.press_Re = x_to_Re((double)x, data);
 		data->mouse.press_Im = y_to_Im((double)y, data);
@@ -73,7 +73,7 @@ int	mouse_pos(int x, int y, t_data *data)
 
 int	mouse_release(int keycode, int x, int y, t_data *data)
 {
-	if (keycode == MOUSE_LEFT_KEYCODE)
+	if (keycode == MOUSE_LEFT_KEYCODE && data->fract.get_mouse_pos == OFF)
 	{
 		data->mouse.release_Re = x_to_Re((double)x, data);
 		data->mouse.release_Im = y_to_Im((double)y, data);
